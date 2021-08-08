@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+ }
+
+.navApp{
+  border: 1px solid black;
+  position: sticky;
+top: 0;
+}
+
+
+
+.navv{
+  height: auto;
+  width: 100%;
+  border: 1px hidden black;
+  background: white;
+  z-index: 1200;
+  overflow: hidden;
+}
