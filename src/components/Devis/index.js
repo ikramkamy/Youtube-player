@@ -188,11 +188,12 @@ const handelChangearr2=()=>{
     }
 return(<div className="devis">
 
-<h1>Formule TRANKIL</h1>
+<h1>Formule TRINKIL</h1>
 <div className="formule">
+
    <div className="marg-left"></div>
 <form className="form">
-
+<h1>Adresse de départ</h1>
 <label className=" Myborder-top">
 <p className="title">Logement de départ </p>
     <input className="input-style" type="text"  placeholder="Address de départ"  name="address_a"   />
@@ -212,11 +213,11 @@ return(<div className="devis">
 
 </label>
 
-<label className="unserline-button">
+<label >
 <p className="title">Nombre d’étages </p>
 <input className="input-style " type="number"  placeholder="Nombre d’étages"  name="etages"   />
 </label>
-<label className="unserline-button">
+<label >
 <p className="title">Besoin d’un monte Meuble?</p>
 <div className="check-box">
       <label for="scales">Oui
@@ -231,16 +232,16 @@ return(<div className="devis">
 </label>
 
 
-{check3 &&(<label className="unserline-button">
+{check3 &&(<label >
   
     
-    <p className="title" data-tip="250/450§" >Vous voulez le monte meuble pour:</p>
+    <p className="title"  >Vous voulez le monte meuble pour:</p>
     <ReactTooltip /> 
     <div className="check-box">
-      <label for="scales" >demi journée
+      <label for="scales" data-tip="250€">demi journée
        <input type="checkbox" id="scales" name="monte" checked={check5} onClick={handelChange5}/>
      </label>
-<label for="scales" data-tip="450§">7H
+<label for="scales" data-tip="450€">7H
             <input type="checkbox" id="scales" name="n-monte" checked={check6} onClick={handelChange6}/>
   </label>
 
@@ -250,7 +251,7 @@ return(<div className="devis">
     
 }
 
- <label className="unserline-button">
+ <label >
  <p className="title">
  est-il possible de stationner un camion à moins de 30m de l’entrée du logement?
 
@@ -266,38 +267,27 @@ return(<div className="devis">
 
 </div>
 </label>
-{check8 && (<label className="unserline-button">
+{check8 && (<label >
     <p className="title">à quel distance pourrait-il stationner?</p>
     <input className="input-style " type="number"  placeholder="distace de stationnement"  name="distance"   />
 </label>)
 
 }
 
-<label className="unserline-button">
+<label >
 <p className="title">Indiquer la surface approximative (en m2) à déménager</p>
 <input className="input-style " type="number"  placeholder="Surface"  name="etages"   />
 </label>
-<label className="unserline-button">
-<p className="title">Indiquer le nombre de cartons:</p>   
+<label >
+<p className="title">Le nombre de cartons standards :</p>   
 <input className="input-style " type="number"  placeholder="Nombre de cartons"  name="nmbrCarton"  onChange={ handelInputNumbers}  />
-
 </label>
-<label className="unserline-button">
-<p className="title">Cocher le type de cartons</p>   
-<div className="check-box">
-
-      <label for="scales">carton standard
-       <input type="checkbox" id="scales" name="carton-s" checked={check9} onClick={handelChange9}/>
-     </label>
-<label for="scales">carton livre
-            <input type="checkbox" id="scales" name="carton-l" checked={check10} onClick={handelChange10}/>
-  </label>
-
-</div>
-
+<label >
+<p className="title">Le nombre de cartons livres :</p>   
+<input className="input-style " type="number"  placeholder="Nombre de cartons"  name="nmbrCarton"  onChange={ handelInputNumbers}  />
 </label>
 
-<label className="unserline-button">
+<label >
  <p className="title">Indiquer le nombre de pièces</p>
  <input className="input-style " type="number"  placeholder="Nombre de piéces"  name="pieces"   />
 </label>
@@ -354,8 +344,8 @@ Clickez <a href="https://www.officiel-demenagement.com/">ici </a>pour acheter un
     <div className="formule">
    <div className="marg-left"></div>
 <form className="form">
-
-<label className="unserline-button">
+<h1 >Adresse Arrivé</h1>
+<label >
 <p className="title">Logement Futur </p>
     <input className="input-style" type="text"  placeholder="Address d'arrivéée"  name="address_a"   />
 </label>
@@ -378,7 +368,7 @@ Clickez <a href="https://www.officiel-demenagement.com/">ici </a>pour acheter un
 <p className="title">Nombre d’étages </p>
 <input className="input-style " type="number"  placeholder="Nombre d’étages"  name="etages"   />
 </label>
-<label className="unserline-button">
+<label >
 <p className="title">Besoin d’un monte Meuble?</p>
 <div className="check-box">
       <label for="scales">Oui
@@ -393,7 +383,7 @@ Clickez <a href="https://www.officiel-demenagement.com/">ici </a>pour acheter un
 </label>
 
 
-{check3 &&(<label className="unserline-button">
+{check3 &&(<label >
   
     
     <p className="title">demi journée/7H</p> 
@@ -410,7 +400,7 @@ Clickez <a href="https://www.officiel-demenagement.com/">ici </a>pour acheter un
 </label>)
     
 }
-<label className="unserline-button">
+<label >
 <p className="title">
 est-il possible de stationner un camion à moins de 30m de l’entrée du logement?
 </p>
@@ -425,7 +415,7 @@ est-il possible de stationner un camion à moins de 30m de l’entrée du logeme
 
 </div>
 </label>
- <label className="unserline-button">
+ <label >
  <p className="title">
  est-il possible de stationner un camion à moins de 30m de l’entrée du logement?
 
@@ -443,16 +433,16 @@ est-il possible de stationner un camion à moins de 30m de l’entrée du logeme
 </label>
 
 
-<label className="unserline-button">
+<label >
 <p className="title">Indiquer la surface approximative (en m2) à déménager</p>
 <input className="input-style " type="number"  placeholder="Surface"  name="etages"   />
 </label>
-<label className="unserline-button">
+<label >
 <p className="title">Indiquer le nombre de cartons:</p>   
 <input className="input-style " type="number"  placeholder="Nombre de cartons"  name="nbr-carton"   />
 
 </label>
-<label className="unserline-button">
+<label >
 <p className="title"></p>   
 <div className="check-box">
 
@@ -468,7 +458,7 @@ est-il possible de stationner un camion à moins de 30m de l’entrée du logeme
 </label>
 
 
-<label className="unserline-button">
+<label >
  <p className="title">
  Indiquer le nombre de pièces
 
@@ -480,7 +470,7 @@ est-il possible de stationner un camion à moins de 30m de l’entrée du logeme
 
 
 
-<label className="unserline-button">
+<label >
 <p className="title">Besoin des cartons?</p>
 <div className="check-box">
       <label for="scales">Oui
@@ -512,7 +502,7 @@ Clickez <a href="https://www.officiel-demenagement.com/">ici </a>pour acheter un
 
 </label>
 
-<label>
+<label className="unserline-button">
 <p className="title">Choisissez L'heure</p>
 <input className="input-style" type="time"/>
 </label>

@@ -1,5 +1,5 @@
 *{
-    font-family: 'Times New Roman', Times, serif;
+    font-family:  'Montserrat, Helvetica, Arial, Lucida, sans-serif';
     font-style: oblique;
     font-size: 1em;
     font-weight: 400;
@@ -106,5 +106,5 @@
 }
 .Myborder-top{
     border-top: 1px solid red;
-    padding-top: 5%;
+    padding: 5%;
 }
