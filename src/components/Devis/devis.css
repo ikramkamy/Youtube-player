@@ -91,7 +91,7 @@
     height: 30px;
 }
 .unserline-button{
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid red;
     margin-bottom: 2%;
 }
 .pos{
@@ -103,4 +103,8 @@
 }
 .pos button{
     color: red;
+}
+.Myborder-top{
+    border-top: 1px solid red;
+    padding-top: 5%;
 }

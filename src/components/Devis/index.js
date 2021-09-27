@@ -179,15 +179,22 @@ const handelChangearr2=()=>{
     const openshow=()=>{
         setShow(!show)
     }
+   
+    const[nmbrCarton,setNmbrCarton]=useState(0);
+    const handelInputNumbers=(event)=>{
+        setNmbrCarton(event.target.value)
+
+         console.log("NmbrCarton",nmbrCarton)
+    }
 return(<div className="devis">
 
-<h1>Formule ZEN</h1>
+<h1>Formule TRANKIL</h1>
 <div className="formule">
    <div className="marg-left"></div>
 <form className="form">
 
-<label className="unserline-button">
-<p className="title">Logement actuel </p>
+<label className=" Myborder-top">
+<p className="title">Logement de départ </p>
     <input className="input-style" type="text"  placeholder="Address de départ"  name="address_a"   />
 </label>
 <label>
@@ -205,7 +212,7 @@ return(<div className="devis">
 
 </label>
 
-<label>
+<label className="unserline-button">
 <p className="title">Nombre d’étages </p>
 <input className="input-style " type="number"  placeholder="Nombre d’étages"  name="etages"   />
 </label>
@@ -227,7 +234,7 @@ return(<div className="devis">
 {check3 &&(<label className="unserline-button">
   
     
-    <p className="title" data-tip="250/450§" >demi journée/7H</p>
+    <p className="title" data-tip="250/450§" >Vous voulez le monte meuble pour:</p>
     <ReactTooltip /> 
     <div className="check-box">
       <label for="scales" >demi journée
@@ -259,21 +266,30 @@ return(<div className="devis">
 
 </div>
 </label>
+{check8 && (<label className="unserline-button">
+    <p className="title">à quel distance pourrait-il stationner?</p>
+    <input className="input-style " type="number"  placeholder="distace de stationnement"  name="distance"   />
+</label>)
 
+}
 
 <label className="unserline-button">
-<p className="title">Indiquer la surface approximative (en m3) à déménager</p>
+<p className="title">Indiquer la surface approximative (en m2) à déménager</p>
 <input className="input-style " type="number"  placeholder="Surface"  name="etages"   />
 </label>
-
 <label className="unserline-button">
-<p className="title"></p>   
+<p className="title">Indiquer le nombre de cartons:</p>   
+<input className="input-style " type="number"  placeholder="Nombre de cartons"  name="nmbrCarton"  onChange={ handelInputNumbers}  />
+
+</label>
+<label className="unserline-button">
+<p className="title">Cocher le type de cartons</p>   
 <div className="check-box">
 
       <label for="scales">carton standard
        <input type="checkbox" id="scales" name="carton-s" checked={check9} onClick={handelChange9}/>
      </label>
-<label for="scales">carton libre
+<label for="scales">carton livre
             <input type="checkbox" id="scales" name="carton-l" checked={check10} onClick={handelChange10}/>
   </label>
 
@@ -282,10 +298,7 @@ return(<div className="devis">
 </label>
 
 <label className="unserline-button">
- <p className="title">
- Indiquer le nombre de pièces
-
- </p>
+ <p className="title">Indiquer le nombre de pièces</p>
  <input className="input-style " type="number"  placeholder="Nombre de piéces"  name="pieces"   />
 </label>
 
@@ -431,10 +444,14 @@ est-il possible de stationner un camion à moins de 30m de l’entrée du logeme
 
 
 <label className="unserline-button">
-<p className="title">Indiquer la surface approximative (en m3) à déménager</p>
+<p className="title">Indiquer la surface approximative (en m2) à déménager</p>
 <input className="input-style " type="number"  placeholder="Surface"  name="etages"   />
 </label>
+<label className="unserline-button">
+<p className="title">Indiquer le nombre de cartons:</p>   
+<input className="input-style " type="number"  placeholder="Nombre de cartons"  name="nbr-carton"   />
 
+</label>
 <label className="unserline-button">
 <p className="title"></p>   
 <div className="check-box">
@@ -442,13 +459,14 @@ est-il possible de stationner un camion à moins de 30m de l’entrée du logeme
       <label for="scales">carton standard
        <input type="checkbox" id="scales" name="carton-s" checked={check99} onClick={handelChange99}/>
      </label>
-<label for="scales">carton libre
+<label for="scales">carton livre
             <input type="checkbox" id="scales" name="carton-l" checked={check100} onClick={handelChange100}/>
   </label>
 
 </div>
 
 </label>
+
 
 <label className="unserline-button">
  <p className="title">
@@ -502,7 +520,7 @@ Clickez <a href="https://www.officiel-demenagement.com/">ici </a>pour acheter un
 
 <div className="continue-wrap"><button>Valider</button></div>
 <Link to="/"><FaArrowCircleLeft  className="icon-choix"/></Link>
-<div className="continue-wrap pos"><button>{total}§</button></div>
+<div className="continue-wrap pos"><button>Total: {total} €</button></div>
 </form>
 
 
