@@ -3,37 +3,56 @@ import './App.css';
 import Nav from './components/Nav'
 import Home from './components/Home'
 import { useState, useEffect } from 'react';
-
+import Devis from './components/Devis';
+import LogementArr from './components/Devis/LogementArr';
+import { BrowserRouter as Router,Switch, Route, Link } from "react-router-dom";
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight, FaBeer } from 'react-icons/fa';
+import FormuleChrono from './components/FormuleChrono';
 function App() {
-  const [etat, setEtat] = useState(false);
-
-  window.addEventListener('scroll', () => {
-    let l = document.querySelector('.navv');
-    let top = window.scrollY;
-    if (top > 20) {
-     
-      l.style.position = "fixed";
-      l.zIndex = "2000";
-      l.style.background = "#146f5b";
-      l.style.color = "#c19a5d";
-    }
-    else {
-      l.style.position = "static";
-      l.style.background = "white";
-      l.style.color = "black";
-    }
-  })
-
+ 
   return (
     <div className="App">
+<Router>
+   
+    
+<Switch>
+  <Route exact path="/">
+   <div className="navv">
 
-      <div className="navv">
-        <Nav />
+ <h1>Choisissez la formule qui vous convient :</h1> 
+
+<span  className="choix"><Link to="/depart">Formule Zen  <FaArrowAltCircleRight className="icon-choix"/></Link></span>
+<span  className="choix"><Link to="/chrono">Formule chrono  <FaArrowAltCircleRight className="icon-choix"/></Link></span>
+</div>
+
+
+  </Route>
+<Route exact path="/depart">
+<div className="devis-wrap">
+  <Devis/>
       </div>
-      <Home />
-xs
+
+  
+</Route>
+<Route exact path="/chrono" component={FormuleChrono}/>
+
+
+
+
+</Switch>
+
+
+</Router>
     </div>
   );
 }
 
 export default App;
+/*
+
+   <div className="navv">
+  <Devis/>
+      </div>
+
+
+*/

@@ -1,0 +1,26 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-size: 1em;
+    font-weight: 400;
+}
+.chrono{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.chrono-btn-wrap{
+    width: 30%;
+    height: 40px;
+    background-color: salmon;
+    
+}
+.chrono-btn-wrap button{
+    width: 100%;
+    height: 100%;
+    background-color: lightgrey;
+    border: 1px solid blue;
+}

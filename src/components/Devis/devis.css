@@ -1,0 +1,106 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+
+.devis{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formule{
+    width: 100%;
+    height: fit-content;
+    
+    box-shadow: lightgrey;
+    display: flex;
+    
+   
+   
+    align-items: center;
+
+}
+.marg-right {
+    width: 20%;
+    height: 100vh;
+  
+}
+.marg-left {
+    width: 20%;
+    height: 100vh;
+   
+}
+.form{
+    width: 60%;
+    border-left: 1px solid blue;
+    border-right: 1px solid blue;
+    padding: 5%;
+}
+.formule label{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+   
+}
+.formule input{
+    width: 70%;
+    /*border: 1px hidden blue;*/
+}
+.check-box{
+    display:flex;
+   
+    justify-content: space-between;
+    width:70%;
+    border: 1px hidden red;
+}
+.check-box label{
+    width: 30%;
+    border: 1px hidden yellow;  
+    display: flex;
+    justify-content: space-between;
+    
+}
+.title{
+  
+    width: 20%;
+}
+.continue-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.continue-wrap button{
+    border: none;
+    width: 60%;
+    height: 40px;
+    margin-bottom: 5%;
+}
+.continue-wrap button:hover{
+    color: white;
+    background-color: blue;
+   
+}
+.input-style{
+    height: 30px;
+}
+.unserline-button{
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 2%;
+}
+.pos{
+    position: fixed;
+    top: 10vh;
+    right: -120px;
+    width: 30%;
+   
+}
+.pos button{
+    color: red;
+}
