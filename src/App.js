@@ -21,8 +21,8 @@ function App() {
 
  <h1>Choisissez la formule qui vous convient :</h1> 
 
-<span  className="choix"><Link to="/depart">Formule Zen  <FaArrowAltCircleRight className="icon-choix"/></Link></span>
-<span  className="choix"><Link to="/chrono">Formule chrono  <FaArrowAltCircleRight className="icon-choix"/></Link></span>
+<span  className="choix"><Link to="/depart">Formule Zen  </Link></span>
+<span  className="choix"><Link to="/chrono">Formule chrono  </Link></span>
 </div>
 
 
