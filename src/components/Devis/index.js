@@ -191,138 +191,135 @@ return(<div className="devis">
 <h1>Formule TRINKIL</h1>
 <div className="formule">
 
-   <div className="marg-left"></div>
+<div className="marg-left"></div>
 <form className="form">
-<h1>Adresse de départ</h1>
+<h1>Adresse </h1>
+<div className="adress">
 <label className=" Myborder-top">
 <p className="title">Logement de départ </p>
-    <input className="input-style" type="text"  placeholder="Address de départ"  name="address_a"   />
+<input className="input-style" type="text"  placeholder="Address de départ"  name="address_a"   />
 </label>
-<label>
-<p className="title"> Type de logement</p>
+<label className=" Myborder-top">
+<p className="title">Logement d'arrivé </p>
+    <input className="input-style" type="text"  placeholder="Address d'arrivé"  name="address_a"   />
+</label>
+</div>
+<div  className="adress">
+<label className=" Myborder-top">
+<p className="title">Choisissez une date</p>
+<input  className="input-style" className="input-style" type="date"/>
 
-<div className="check-box">
-      <label for="scales">Maison
-       <input type="checkbox" id="scales" name="maison" checked={check1} onClick={handelChange}/>
-     </label>
-<label for="scales">Appartement
-            <input type="checkbox" id="scales" name="appart" checked={check2} onClick={handelChange2}/>
-  </label>
-
+</label>
 </div>
 
-</label>
 
-<label >
+    <h1>Départ</h1>
+    <div className="dept-wrap">
+        
+        <label className=" input-ckeck-box">
+           
+
+        <div className="check-box">
+        <label for="scales"  className="checkbox-circle">
+        <p className="title">Maison</p>
+        <div className="check-circl" onClick={handelChange}></div>
+        </label>
+        <label for="scales" className="checkbox-circle">
+        <p className="title">Appartement </p>
+        <div className="check-circl" onClick={handelChange2}></div>
+        </label>
+        
+         </div>
+  </label>
+  <label className=" Myborder-top">
 <p className="title">Nombre d’étages </p>
 <input className="input-style " type="number"  placeholder="Nombre d’étages"  name="etages"   />
 </label>
-<label >
-<p className="title">Besoin d’un monte Meuble?</p>
-<div className="check-box">
-      <label for="scales">Oui
-       <input type="checkbox" id="scales"  name="monte" checked={check3} onClick={handelChange3}/>
-     </label>
-<label for="scales">Non
-            <input type="checkbox" id="scales" name="n-monte" checked={check4} onClick={handelChange4}/>
-  </label>
 
-</div>
+<label className=" Myborder-top">
+<p className="title">Monte-meubles </p>
+<select className="input-style "  type="number"  placeholder="Ascenseur"  name="ascnsr"  >
+<option label=""></option>
 
+<option label="Non">Non</option>
+<option label=" oui (7h)">Oui pour 7h</option>
+<option label=" oui (1/2j)">Oui pour une demie journée</option>
+</select>
+</label>
+<label className=" Myborder-top">
+<p className="title">Ascenseur</p>
+<select className="input-style "  type="number"  placeholder="Ascenseur"  name="ascnsr"  >
+<option label=""></option>
+
+<option label="Non">Non</option>
+<option label=" oui">Oui </option>
+
+</select>
 </label>
 
 
-{check3 &&(<label >
-  
-    
-    <p className="title"  >Vous voulez le monte meuble pour:</p>
-    <ReactTooltip /> 
-    <div className="check-box">
-      <label for="scales" data-tip="250€">demi journée
-       <input type="checkbox" id="scales" name="monte" checked={check5} onClick={handelChange5}/>
-     </label>
-<label for="scales" data-tip="450€">7H
-            <input type="checkbox" id="scales" name="n-monte" checked={check6} onClick={handelChange6}/>
-  </label>
+</div>
+
+<div>
+
+
 
 </div>
 
-</label>)
-    
-}
 
- <label >
- <p className="title">
- est-il possible de stationner un camion à moins de 30m de l’entrée du logement?
 
- </p>
-<div className="check-box">
 
-      <label for="scales">Oui
-       <input type="checkbox" id="scales" name="station" checked={check7} onClick={handelChange7}/>
-     </label>
-<label for="scales">Non
-            <input type="checkbox" id="scales" name="n-station" checked={check8} onClick={handelChange8}/>
-  </label>
+<div className="dept-wrap">
+<label  className=" Myborder-top">
+ <p className="title">Stationnement à moin 30m </p>
 
-</div>
+<select className="input-style "  type="number"  placeholder="Ascenseur"  name="ascnsr"  >
+<option label=""></option>
+
+<option label="Non">Non</option>
+<option label=" oui">Oui </option>
+
+</select>
+
+
 </label>
-{check8 && (<label >
-    <p className="title">à quel distance pourrait-il stationner?</p>
+<label className=" Myborder-top" >
+    <p className="title">Distanc</p>
     <input className="input-style " type="number"  placeholder="distace de stationnement"  name="distance"   />
-</label>)
-
-}
-
-<label >
-<p className="title">Indiquer la surface approximative (en m2) à déménager</p>
-<input className="input-style " type="number"  placeholder="Surface"  name="etages"   />
 </label>
-<label >
+<label  className=" Myborder-top">
+ <p className="title">La Surface </p>
+
+<input className="input-style "  type="number"  placeholder="surface en m²"  name="ascnsr"/>
+
+</label>
+
+<label className=" Myborder-top">
+ <p className="title">Indiquer le nombre de pièces</p>
+ <input className="input-style " type="number"  placeholder="Nombre de piéces"  name="pieces"   />
+</label>
+    
+</div>
+
+<div className="dept-wrap" >
+
+
+<label className=" Myborder-top" >
 <p className="title">Le nombre de cartons standards :</p>   
 <input className="input-style " type="number"  placeholder="Nombre de cartons"  name="nmbrCarton"  onChange={ handelInputNumbers}  />
 </label>
-<label >
+<label  className=" Myborder-top">
 <p className="title">Le nombre de cartons livres :</p>   
 <input className="input-style " type="number"  placeholder="Nombre de cartons"  name="nmbrCarton"  onChange={ handelInputNumbers}  />
 </label>
 
-<label >
- <p className="title">Indiquer le nombre de pièces</p>
- <input className="input-style " type="number"  placeholder="Nombre de piéces"  name="pieces"   />
-</label>
-
-
-
-
-
-<label className="unserline-button">
-<p className="title">Besoin des cartons?</p>
-<div className="check-box">
-      <label for="scales">Oui
-       <input type="checkbox" id="scales" name="carton" checked={check11} onClick={handelChange11}/>
-     </label>
-<label for="scales">Non
-            <input type="checkbox" id="scales" name="n-carton" checked={check12} onClick={handelChange12}/>
-  </label>
-
 </div>
 
-</label>
-
-
-{check11 &&(<label>
-  
- <p>  
-Clickez <a href="https://www.officiel-demenagement.com/">ici </a>pour acheter un carton:
-</p> 
-<label>
 
 
 
-</label>
-</label>)}
 
+ 
 </form>
 
 
@@ -331,185 +328,103 @@ Clickez <a href="https://www.officiel-demenagement.com/">ici </a>pour acheter un
 <div className="marg-right"></div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
     <div className="formule">
    <div className="marg-left"></div>
+
+
 <form className="form">
-<h1 >Adresse Arrivé</h1>
-<label >
-<p className="title">Logement Futur </p>
-    <input className="input-style" type="text"  placeholder="Address d'arrivéée"  name="address_a"   />
-</label>
-<label>
-<p className="title"> Type de logement</p>
+<h1> Arrivé</h1>
 
-<div className="check-box">
-      <label for="scales">Maison
-       <input type="checkbox" id="scales" name="maison" checked={checka11} onClick={handelChangea11}/>
-     </label>
-<label for="scales">Appartement
-            <input type="checkbox" id="scales" name="appart" checked={check22} onClick={handelChange22}/>
+    
+    <div className="dept-wrap">
+        
+        <label className=" input-ckeck-box">
+           
+
+        <div className="check-box">
+        <label for="scales"  className="checkbox-circle">
+        <p className=" ">Maison</p>
+        <div className="check-circl" onClick={handelChange}></div>
+        </label>
+        <label for="scales" className="checkbox-circle">
+        <p className="title">Appartement </p>
+        <div className="check-circl" onClick={handelChange2}></div>
+        </label>
+        
+         </div>
   </label>
-
-</div>
-
-</label>
-
-<label>
+  <label className=" Myborder-top">
 <p className="title">Nombre d’étages </p>
 <input className="input-style " type="number"  placeholder="Nombre d’étages"  name="etages"   />
 </label>
-<label >
-<p className="title">Besoin d’un monte Meuble?</p>
-<div className="check-box">
-      <label for="scales">Oui
-       <input type="checkbox" id="scales" name="monte" checked={check33} onClick={handelChange33}/>
-     </label>
-<label for="scales">Non
-            <input type="checkbox" id="scales" name="n-monte" checked={check44} onClick={handelChange44}/>
-  </label>
+
+<label className=" Myborder-top">
+<p className="title">Monte-meubles </p>
+<select className="input-style "  type="number"  placeholder="Ascenseur"  name="ascnsr"  >
+<option label=""></option>
+
+<option label="Non">Non</option>
+<option label=" oui (7h)">Oui pour 7h</option>
+<option label=" oui (1/2j)">Oui pour une demie journée</option>
+</select>
+</label>
+<label className=" Myborder-top">
+<p className="title">Ascenseur</p>
+<select className="input-style "  type="number"  placeholder="Ascenseur"  name="ascnsr"  >
+<option label=""></option>
+
+<option label="Non">Non</option>
+<option label=" oui">Oui </option>
+
+</select>
+</label>
+
 
 </div>
 
-</label>
+<div>
 
 
-{check3 &&(<label >
-  
-    
-    <p className="title">demi journée/7H</p> 
-    <div className="check-box">
-      <label for="scales">demi journée
-       <input type="checkbox" id="scales" name="monte" checked={check55} onClick={handelChange55}/>
-     </label>
-<label for="scales">7H
-            <input type="checkbox" id="scales" name="n-monte" checked={check66} onClick={handelChange66}/>
-  </label>
 
 </div>
 
-</label>)
-    
-}
-<label >
-<p className="title">
-est-il possible de stationner un camion à moins de 30m de l’entrée du logement?
-</p>
 
-<div className="check-box">
-      <label for="scales">Oui
-       <input type="checkbox" id="scales" name="monte" checked={arr1} onClick={handelChangearr1}/>
-     </label>
-<label for="scales">Non
-            <input type="checkbox" id="scales" name="n-monte" checked={arr2} onClick={handelChangearr2}/>
-  </label>
 
-</div>
+
+<div className="dept-wrap">
+<label  className=" Myborder-top">
+ <p className="title">Stationnement à moin 30m </p>
+
+<select className="input-style "  type="number"  placeholder="Ascenseur"  name="ascnsr"  >
+<option label=""></option>
+
+<option label="Non">Non</option>
+<option label=" oui">Oui </option>
+
+</select>
+
+
 </label>
- <label >
- <p className="title">
- est-il possible de stationner un camion à moins de 30m de l’entrée du logement?
-
- </p>
-<div className="check-box">
-
-      <label for="scales">Oui
-       <input type="checkbox" id="scales" name="station" checked={check77} onClick={handelChange77}/>
-     </label>
-<label for="scales">Non
-            <input type="checkbox" id="scales" name="n-station" checked={check88} onClick={handelChange88}/>
-  </label>
-
-</div>
+<label className=" Myborder-top" >
+    <p className="title">Distanc</p>
+    <input className="input-style " type="number"  placeholder="distace de stationnement"  name="distance"   />
 </label>
 
 
-<label >
-<p className="title">Indiquer la surface approximative (en m2) à déménager</p>
-<input className="input-style " type="number"  placeholder="Surface"  name="etages"   />
-</label>
-<label >
-<p className="title">Indiquer le nombre de cartons:</p>   
-<input className="input-style " type="number"  placeholder="Nombre de cartons"  name="nbr-carton"   />
-
-</label>
-<label >
-<p className="title"></p>   
-<div className="check-box">
-
-      <label for="scales">carton standard
-       <input type="checkbox" id="scales" name="carton-s" checked={check99} onClick={handelChange99}/>
-     </label>
-<label for="scales">carton livre
-            <input type="checkbox" id="scales" name="carton-l" checked={check100} onClick={handelChange100}/>
-  </label>
 
 </div>
 
-</label>
-
-
-<label >
- <p className="title">
- Indiquer le nombre de pièces
-
- </p>
- <input className="input-style " type="number"  placeholder="Nombre de piéces"  name="pieces"   />
-</label>
 
 
 
 
 
-<label >
-<p className="title">Besoin des cartons?</p>
-<div className="check-box">
-      <label for="scales">Oui
-       <input type="checkbox" id="scales" name="carton" checked={check111} onClick={handelChange111}/>
-     </label>
-<label for="scales">Non
-            <input type="checkbox" id="scales" name="n-carton" checked={check112} onClick={handelChange112}/>
-  </label>
 
-</div>
-
-</label>
-
-
-{check11 &&(<label>
-  
- <p>  
-Clickez <a href="https://www.officiel-demenagement.com/">ici </a>pour acheter un carton:
-</p> 
-<label>
+ 
 
 
 
-</label>
-</label>)}
-<label>
-<p className="title">Choisissez une date</p>
-<input className="input-style" type="date"/>
 
-</label>
-
-<label className="unserline-button">
-<p className="title">Choisissez L'heure</p>
-<input className="input-style" type="time"/>
-</label>
-
-
-<div className="continue-wrap"><button>Valider</button></div>
-<Link to="/"><FaArrowCircleLeft  className="icon-choix"/></Link>
 <div className="continue-wrap pos"><button>Total: {total} €</button></div>
 </form>
 
@@ -517,11 +432,14 @@ Clickez <a href="https://www.officiel-demenagement.com/">ici </a>pour acheter un
 
 
 <div className="marg-right"></div>
+
 </div>
 
 
-
-
+<div className="continue-wrap valid">
+   Valider
+    </div>
+<Link to="/"><FaArrowCircleLeft  className="icon-choix"/></Link>
     </div>)
 }
 export default Devis;
