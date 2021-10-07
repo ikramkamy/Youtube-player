@@ -284,7 +284,7 @@ return(<div className="devis">
 
 </label>
 <label className=" Myborder-top" >
-    <p className="title">Distanc</p>
+    <p className="title">Distance</p>
     <input className="input-style " type="number"  placeholder="distace de stationnement"  name="distance"   />
 </label>
 <label  className=" Myborder-top">
@@ -406,7 +406,7 @@ return(<div className="devis">
 
 </label>
 <label className=" Myborder-top" >
-    <p className="title">Distanc</p>
+    <p className="title">distance</p>
     <input className="input-style " type="number"  placeholder="distace de stationnement"  name="distance"   />
 </label>
 

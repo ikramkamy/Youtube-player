@@ -184,3 +184,6 @@ margin-top: 20px;
     display: flex;
 }
 
+input,option,select{
+    font-size: 0.8em;
+}

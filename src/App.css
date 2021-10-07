@@ -20,8 +20,8 @@ top: 0;
 .choix a{
   text-decoration: none;
  
- 
-  font-size: 1.3em;
+  color: #2c216f;
+  font-size: 1em;
   font-weight: 400;
 }
 .icon-choix{
