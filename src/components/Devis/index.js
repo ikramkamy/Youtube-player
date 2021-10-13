@@ -40,12 +40,8 @@ const Devis=()=>{
     const[dep2,setDep2]=useState(false);
     const[arr1,setArr1]=useState(false);
     const[arr2,setArr2]=useState(false);
-    var [total,setTotal]=useState(120);
-    const handelChange=()=>{
-
-        setCheck1(true) 
-        setCheck2(false) 
-    }
+   
+    
     const handelChange2=()=>{
 
         setCheck1(false) 
@@ -186,6 +182,38 @@ const handelChangearr2=()=>{
 
          console.log("NmbrCarton",nmbrCarton)
     }
+const[input,setInput]=useState(
+[{ 
+    mnt:0,
+    crtlvr:0,
+    crtnstndr:0,
+    
+}
+]
+
+);
+const [total,setTotal]=useState(120);
+useEffect(() => {
+    
+ 
+    setTotal(Number(120)+Number(input.mnt)+Number(input.crtlvr)*40+Number(input.crtnstndr)*50);
+
+
+})
+console.log('TOTAL',total )
+
+    const handelChange=(event)=>{
+        const {name,value}=event.target;
+        setInput(prevInput=>{
+          return  { 
+            ...prevInput,
+            [name]:value
+        
+          }
+        })
+    
+    }
+console.log("THE INPUT",input);
 return(<div className="devis">
 
 <h1>Formule TRINKIL</h1>
@@ -238,12 +266,12 @@ return(<div className="devis">
 
 <label className=" Myborder-top">
 <p className="title">Monte-meubles </p>
-<select className="input-style "  type="number"  placeholder="Ascenseur"  name="ascnsr"  >
+<select className="input-style "  type="number"  placeholder="Ascenseur"  name="mnt" value={input.mnt} onChange={handelChange} >
 <option label=""></option>
 
 <option label="Non">Non</option>
-<option label=" oui (7h)">Oui pour 7h</option>
-<option label=" oui (1/2j)">Oui pour une demie journée</option>
+<option label=" oui (7h)" value="450">Oui pour 7h</option>
+<option label=" oui (1/2j)"  value="250"   >Oui pour une demie journée</option>
 </select>
 </label>
 <label className=" Myborder-top">
@@ -306,11 +334,11 @@ return(<div className="devis">
 
 <label className=" Myborder-top" >
 <p className="title">Le nombre de cartons standards :</p>   
-<input className="input-style " type="number"  placeholder="Nombre de cartons"  name="nmbrCarton"  onChange={ handelInputNumbers}  />
+<input className="input-style " type="number"  placeholder="Nombre de cartons"  name="crtlvr" value={input.crtlvr} onChange={handelChange} />
 </label>
 <label  className=" Myborder-top">
 <p className="title">Le nombre de cartons livres :</p>   
-<input className="input-style " type="number"  placeholder="Nombre de cartons"  name="nmbrCarton"  onChange={ handelInputNumbers}  />
+<input className="input-style " type="number"  placeholder="Nombre de cartons"  name="crtnstndr" value={input.crtnstndr} onChange={handelChange}  />
 </label>
 
 </div>
