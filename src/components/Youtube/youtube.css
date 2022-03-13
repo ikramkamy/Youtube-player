@@ -1,0 +1,19 @@
+.wrap-all{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+.video-center{
+    width: 70%;
+    height: 100%;
+    border: 1px solid lightgray;
+}
+.side-videos{
+    width: 20%;
+    height: 100%;
+    border: 1px solid lightgray;
+}
+.item-side-video{
+    height: 20%;
+    border-bottom: 1px solid lightgray;
+}
