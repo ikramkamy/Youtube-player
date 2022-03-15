@@ -4,10 +4,10 @@ import axios from 'axios';
 import {Grid} from '@material-ui/core';
 import VideoDetail from './VideoDetail';
 import SearchBar from './SearchBar';
-import youtube from '../../api/youtube';
 import VideoList from './VideoList';
 const Youtube=()=>{
 const [vid,setVid]=useState([]);
+
 /** 
 const handelSubmit = async (searchTerm)=>{
 const response =await youtube.get('serach', {
@@ -51,26 +51,32 @@ const getdata2=()=>{
         console.log(error);
         }) 
 }
-/*
 useEffect(() => {
   axios.get('https://youtube.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyA9l3r22ExG22iz2M3HZQbl_jlEebl23AY')
   .then(res => {
-    const data=res.data;
-    console.log("data from youtube API",data);
+    const data=res.data.items;
+    setVid(data);
 },[]) 
   .catch(function (error) {
       console.log(error);
   }) 
-   })
-*/
+   },[])
+
    const [selectedvid,setSelectedvid]=useState();
+   const picktheSelectedVideo=(url)=>{
+    console.log("the url is selected",url)
+
+   }
+   const sendUrl2=(url)=>{
+    setSelectedvid(url) 
+   }
     return(
 <Grid  justifyContent='center' container spacing={10}>
  <Grid item xs={12}>
     <Grid container spacing={10}>
         <Grid item xs={12}><SearchBar onFormSubmit={getdata2}/></Grid>
-        <Grid item xs={8}><VideoDetail video={selectedvid}/></Grid>
-        <Grid item xs={4}><VideoList videos={vid}/></Grid>
+        <Grid item xs={8}><VideoDetail video={selectedvid} selectUrl={picktheSelectedVideo}/></Grid>
+        <Grid item xs={4}><VideoList videos={vid} sendUrl2={sendUrl2}/></Grid>
     </Grid>
 </Grid>
 </Grid>)

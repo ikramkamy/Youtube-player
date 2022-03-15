@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Grid, Typography,Paper} from '@material-ui/core';
 
 const VideoItem=(props)=>{
-    const {URL}=props;
-    return(<Grid item xs={12}>
+    const {URL,title,sendUrl}=props;
+ const [urlsetected,setUrlsetected]=useState("");
+
+ const callsetURL=()=>{
+    localStorage.setItem(`urlstrg`, URL );
+      
+    }
+
+    return(<div className='video-bloc'>
 <Paper style={{ display:"flex", alignItems:"center" }}></Paper>
-<img style={{marginRight:"20px"}} alt="thumbnail" src={URL}/>
-<Typography variant="subtitle1"><b>title</b></Typography>
+
+<img style={{marginRight:"20px"}} 
+alt="thumbnail" src={URL} height="150px" width="150px"
+onClick={()=>(callsetURL())}/>
+<div variant="subtitle1"><b>{title}</b></div>
 <iframe width="100%" height="100%" 
-src={URL}
+
 title="YouTube video player" frameBorder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
  allowFullScreen>
+      </iframe>
 
- </iframe>
-    </Grid>)
+    </div>)
 }
 export default VideoItem;

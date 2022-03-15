@@ -1,7 +1,5 @@
 import './App.css';
-import { useState, useEffect } from 'react';
 import { BrowserRouter as Router,Switch, Route, Link } from "react-router-dom";
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight, FaBeer } from 'react-icons/fa';
 import Youtube from './components/Youtube';
 function App() {
  
